@@ -43,10 +43,10 @@ public class UserController {
         return userService.delete(user);
     }
 
-//    @RequestMapping
-//    @DeleteMapping
-//    public void deleteAll() {
-//        userService.deleteAll();
-//    }
+    @RequestMapping(value = "/deleteAll", method = RequestMethod.DELETE)
+    @ResponseBody
+    public void deleteAll() {
+        userService.deleteAll();
+    }
 
 }
